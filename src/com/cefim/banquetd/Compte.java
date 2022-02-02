@@ -1,11 +1,11 @@
 package com.cefim.banquetd;
 
 public class Compte {
-    private int numéro;
+    private int numero;
     private float solde;
 
     public Compte(){
-        this.numéro = numéro;
+        this.numero = numero;
         this.solde = solde;
     }
 
@@ -26,5 +26,7 @@ public class Compte {
     }
 
     public void virer(float valeur, Compte Destinataire){
+        this.retrait(valeur);
+        Destinataire.depot(valeur);
     }
 }
